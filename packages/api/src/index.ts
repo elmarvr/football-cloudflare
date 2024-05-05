@@ -1,11 +1,12 @@
 import { Hono } from "hono";
+import { trpcServer } from "@hono/trpc-server";
+import { appRouter } from "./routers/_app";
 
 const app = new Hono();
 
-app.get("/", (c) => {
-  return c.text("Hello Hono!");
-});
-
-export const hello = "World" as const;
-
-export default app;
+app.get(
+  "/trpc/*",
+  trpcServer({
+    router: appRouter,
+  })
+);

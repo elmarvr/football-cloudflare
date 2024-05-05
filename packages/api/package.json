@@ -1,11 +1,12 @@
 {
   "name": "@football/api",
-  "main": "src/index.ts",
+  "main": "index.ts",
   "scripts": {
     "dev": "wrangler dev src/index.ts",
     "deploy": "wrangler deploy --minify src/index.ts"
   },
   "dependencies": {
+    "@hono/trpc-server": "^0.3.0",
     "@trpc/server": "^10.45.2",
     "hono": "^4.3.2"
   },

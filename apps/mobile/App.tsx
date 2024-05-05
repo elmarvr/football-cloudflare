@@ -1,11 +1,11 @@
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
-import { hello } from "@football/api";
+import { test } from "@football/api";
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>{hello}</Text>
+      <Text></Text>
       <StatusBar style="auto" />
     </View>
   );

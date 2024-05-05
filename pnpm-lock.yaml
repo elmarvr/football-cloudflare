@@ -38,6 +38,9 @@ importers:
 
   packages/api:
     dependencies:
+      '@hono/trpc-server':
+        specifier: ^0.3.0
+        version: 0.3.0(@trpc/server@10.45.2)(hono@4.3.2)
       '@trpc/server':
         specifier: ^10.45.2
         version: 10.45.2
@@ -2221,6 +2224,17 @@ packages:
     resolution: {integrity: sha512-foQZKJig7Ob0BMAYBfcJk8d77QtOe7Wo4ox7ff1lQYoNNAb6jwcY1ncdoy2e9wQZzvNy7ODZCYJkK8kzmcAnAg==}
     dependencies:
       '@hapi/hoek': 9.3.0
+    dev: false
+
+  /@hono/trpc-server@0.3.0(@trpc/server@10.45.2)(hono@4.3.2):
+    resolution: {integrity: sha512-TsCQFCgDuNjKBpJ9LJIcKmD+/eDS3uIdEv14SSo+VNz2QPGaxVra0pLnHV1JLxbVcyfLB6/218erJoKgM+AnSA==}
+    engines: {node: '>=16.0.0'}
+    peerDependencies:
+      '@trpc/server': ^10.10.0
+      hono: '>=3.*'
+    dependencies:
+      '@trpc/server': 10.45.2
+      hono: 4.3.2
     dev: false
 
   /@isaacs/ttlcache@1.4.1:
