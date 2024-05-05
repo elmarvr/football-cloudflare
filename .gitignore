@@ -1,0 +1,10 @@
+
+# dependencies
+**/node_modules
+
+# Expo
+**/.expo/*
+
+# Cloudflare D1
+**/.wrangler/*
+**/.dev.vars
