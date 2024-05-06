@@ -1,4 +1,8 @@
 {
   "name": "football-mono",
-  "version": "1.0.0"
+  "version": "1.0.0",
+  "scripts": {
+    "server": "pnpm --filter @football/api dev",
+    "client": "pnpm --filter @football/mobile ios"
+  }
 }

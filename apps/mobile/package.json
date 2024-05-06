@@ -4,16 +4,21 @@
   "main": "index.ts",
   "scripts": {
     "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
+    "android": "expo start --android --localhost",
+    "ios": "expo start --ios --localhost",
     "web": "expo start --web"
   },
   "dependencies": {
     "@football/api": "workspace:^",
+    "@tanstack/react-query": "4",
+    "@trpc/client": "^10.45.2",
+    "@trpc/react-query": "^10.45.2",
+    "@trpc/server": "^10.45.2",
     "expo": "~50.0.17",
     "expo-status-bar": "~1.11.1",
     "react": "18.2.0",
-    "react-native": "0.73.6"
+    "react-native": "0.73.6",
+    "superjson": "^2.2.1"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
