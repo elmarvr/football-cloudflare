@@ -11,8 +11,11 @@
   },
   "dependencies": {
     "@hono/trpc-server": "^0.3.0",
+    "@hono/zod-validator": "^0.2.1",
     "@libsql/client": "^0.6.0",
+    "@lucia-auth/adapter-drizzle": "^1.0.7",
     "@trpc/server": "^10.45.2",
+    "arctic": "^1.8.0",
     "drizzle-orm": "^0.30.10",
     "hono": "^4.3.2",
     "lucia": "^3.2.0",

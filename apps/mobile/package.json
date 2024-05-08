@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@football/api": "workspace:^",
+    "@react-native-google-signin/google-signin": "^11.0.1",
     "@tanstack/react-query": "4",
     "@trpc/client": "^10.45.2",
     "@trpc/react-query": "^10.45.2",

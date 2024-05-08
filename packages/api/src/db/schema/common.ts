@@ -1,7 +1,8 @@
-import { sqliteTable, text } from "drizzle-orm/sqlite-core";
+import { integer, text } from "drizzle-orm/sqlite-core";
+import { commonTable } from "../utils";
 
-export const teamTable = sqliteTable("team", {
-  id: text("id").notNull().primaryKey(),
+export const teamTable = commonTable("team", {
+  id: integer("id").notNull().primaryKey({ autoIncrement: true }),
   name: text("name").notNull(),
   description: text("description"),
 });

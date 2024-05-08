@@ -4,4 +4,6 @@
 type Env = {
   TURSO_URL: string;
   TURSO_AUTH_TOKEN: string;
+  GOOGLE_CLIENT_ID: string;
+  GOOGLE_CLIENT_SECRET: string;
 };

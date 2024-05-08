@@ -1,13 +1,24 @@
-import { drizzle } from "drizzle-orm/libsql";
+import { LibSQLDatabase, drizzle } from "drizzle-orm/libsql";
 import { teamTable } from "./schema/common";
-import { Config, createClient } from "@libsql/client";
+import { createClient } from "@libsql/client";
+import { accountTable, sessionTable, userTable } from "./schema/auth";
 
-export function createDb(config: Pick<Config, "url" | "authToken">) {
-  const client = createClient(config);
+const schema = {
+  users: userTable,
+  sessions: sessionTable,
+  accounts: accountTable,
+  teams: teamTable,
+};
+
+export function createDb(env: Pick<Env, "TURSO_URL" | "TURSO_AUTH_TOKEN">) {
+  const client = createClient({
+    url: env.TURSO_URL,
+    authToken: env.TURSO_AUTH_TOKEN,
+  });
 
   return drizzle(client, {
-    schema: {
-      team: teamTable,
-    },
+    schema,
   });
 }
+
+export type Database = LibSQLDatabase<typeof schema>;
