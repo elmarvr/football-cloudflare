@@ -1,5 +1,5 @@
 import type { Context as HonoContext } from "hono";
-import { createDb } from "./db";
+import { createDb } from "../../db/src";
 
 export function createContext(c: HonoContext<{ Bindings: Env }>) {
   const db = createDb(c.env);
